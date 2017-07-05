@@ -1,0 +1,66 @@
+$dashboard-toolbar-color: #e4f2fb;
+$background-color: #aad1e2;
+$side-nav-color: #dbe2e4;
+$side-nav-width: 240px;
+$button-height: 40px;
+$hover-color: #ffffff;
+$icon-hover-color: #3a7193;
+$text-color: #303132;
+
+.tree-node {
+  .button {
+    height: $button-height;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: solid 1px $hover-color;
+    background-color: $side-nav-color;
+    outline: none;
+    box-shadow: none;
+    text-align: left;
+    line-height: $button-height;
+    padding-right: 15px;
+    padding-left: 15px;
+    md-icon {
+      float: right;
+      line-height: $button-height;
+      cursor: pointer;
+      transition-duration: 0.3s;
+      color: $text-color;
+      display: none;
+    }
+    md-icon:hover {
+      color: $icon-hover-color;
+      transition-duration: 0.3s;
+    }
+    p {
+      float:left;
+      transition-duration: 0.3s;
+      margin: 0;
+      font-family: "Avenir-Med", sans-serif;
+      color: $text-color;
+      width: 60%;
+    }
+    p:focus {
+      color: $icon-hover-color;
+    }
+  }
+  .button:focus{
+    background-color: $hover-color;
+    border-left: solid 10px $background-color;
+    transition-duration: 0.1s;
+  }
+  .button:hover {
+    background-color: $hover-color;
+    cursor: pointer;
+    transition-duration: 0.3s;
+  }
+  .button:hover md-icon {
+    display: block;
+  }
+  .child {
+    padding-left: 15px;
+  }
+  .child:hover {
+    color: $hover-color;
+  }
+}

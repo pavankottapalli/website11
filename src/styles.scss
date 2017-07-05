@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'theme';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@font-face {
+  font-family: Avenir-Heavy;
+  src: url("assets/fonts/avenir-heavy.ttf") format("truetype");
+}
+@font-face {
+  font-family: Avenir-Med;
+  src: url("assets/fonts/avenir-med.ttf") format("truetype");
+}
+
+html, body {
+  height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1260px;
+  padding: 30px;
+}
+
+.delete-button {
+  color: red;
+}
+
+.img-main-carousel {
+  max-height: 500px;
+  margin:0 auto;
+      margin: 0 50% 0 0;
+}

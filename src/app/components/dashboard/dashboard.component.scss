@@ -1,0 +1,100 @@
+$dashboard-toolbar-color: #aad1e2;
+$background-color: #ffffff;
+$side-nav-color: #dbe2e4;
+$side-nav-width: 240px;
+$toolbar-height: 64px;
+$button-height: 40px;
+$hover-color: #ffffff;
+$text-color: #303132;
+$icon-color: #3a7193;
+
+.dashboard {
+  height: 100%;
+
+  md-sidenav-container {
+    padding-top: $toolbar-height;
+    height: 100%;
+    background-color: #ffffff;
+    md-sidenav {
+      width: $side-nav-width;
+      background-color: $side-nav-color;
+      padding-top: $toolbar-height;
+      .sidenav-button {
+        a {
+          display: block;
+          height: $button-height;
+          width: $side-nav-width;
+          text-decoration: none;
+          color: $background-color;
+          padding-left: 15px;
+          border-bottom: solid 1px $hover-color;
+          transition-duration: 0.3s;
+          padding: 0;
+          p {
+            float: left;
+            line-height: $button-height;
+            padding: 0;
+            margin: 0;
+            margin-left: 15px;
+            font-family: "Avenir-Med", sans-serif;
+            color: $text-color;
+          }
+          md-icon {
+            float: right;
+            line-height: $button-height;
+            margin-right: 15px;
+            color: $text-color;
+          }
+        }
+        a:hover {
+          background-color: $hover-color;
+          transition-duration: 0.3s;
+        }
+      }
+    }
+  }
+
+  md-toolbar {
+    background-color: $dashboard-toolbar-color;
+    color: $background-color;
+    display: block;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 999;
+    .toolbar-content {
+      text-align: right;
+      width: 100%;
+
+      line-height: 60px;
+      button {
+        color: $icon-color;
+      }
+      .logo {
+        content: url("../../../assets/images/logo-square.png");
+        width: 60px;
+        float: left;
+      }
+      .logo-text {
+        float : left;  
+        color: $icon-color;  
+        }
+    }
+    md-icon {
+      margin-right: 10px;
+      cursor: pointer;
+      transition-duration: 0.3s;
+      color: $icon-color;
+    }
+    md-icon:hover {
+      color: #8ab9d6;
+      transition-duration: 0.3s;
+    }
+  }
+
+  .page-content {
+    padding: 15px;
+    background-color: #ffffff;
+  }
+
+}

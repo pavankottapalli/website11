@@ -1,0 +1,56 @@
+<div class="device-info">
+  <md-card *ngIf="device">
+    <div class="card-header">
+      <h2>Device Information for {{ device.name }}</h2>
+      <div class="save-template">
+        <button md-raised-button (click)="saveTemplate()">Save as Template</button>
+      </div>
+      <div class="delete">
+        <button md-raised-button (click)="deleteDevice()">Delete</button>
+      </div>
+    </div>
+    <hr>
+    <md-tab-group>
+
+      <!-- Properties Tab -->
+      <md-tab label="Properties">
+        <div class="tab-content">
+          <device-properties [device]="device"></device-properties>
+        </div>
+      </md-tab>
+
+      <!-- Transducers Tab -->
+      <md-tab label="Transducers">
+        <div class="tab-content">
+          <device-transducers [device]="device" (updateDevice)="getDevice($event)"></device-transducers>
+        </div>
+      </md-tab>
+
+      <!-- Commands Tab -->
+      <md-tab label="Commands">
+        <div class="tab-content">
+          <device-commands [device]="device" (updateDevice)="getDevice($event)"></device-commands>
+        </div>
+      </md-tab>
+
+      <!-- Services Tab -->
+      <md-tab label="Services">
+        <div class="tab-content">
+          <device-services [device]="device" (updateDevice)="getDevice($event)"></device-services>
+        </div>
+      </md-tab>
+
+      <!-- Visualization Tab -->
+      <md-tab label="Visualization">
+        <div class="tab-content">
+          <input type="checkbox"/>
+          <input type="checkbox"/>
+          <input type="checkbox"/>
+          
+          <device-visualization [device]="device" (updateDevice)="getDevice($event)"></device-visualization>
+        </div>
+      </md-tab>
+
+    </md-tab-group>
+  </md-card>
+</div>

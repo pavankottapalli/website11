@@ -1,0 +1,58 @@
+<div class="device-transducers">
+
+  <ng2-md-datatable>
+
+    <!-- Table Header-->
+    <ng2-md-datatable-header>
+      <ng2-md-datatable-column><p>Name</p></ng2-md-datatable-column>
+      <ng2-md-datatable-column><p>Unit</p></ng2-md-datatable-column>
+      <ng2-md-datatable-column><p>Actuable</p></ng2-md-datatable-column>
+      <ng2-md-datatable-column><p>Value</p></ng2-md-datatable-column>
+      <ng2-md-datatable-column><p>Timestamp</p></ng2-md-datatable-column>
+      <ng2-md-datatable-column><p>Actions</p></ng2-md-datatable-column>
+    </ng2-md-datatable-header>
+ 
+    <!-- Table Body -->
+    <tbody>
+
+      <!-- Item Row -->
+      <ng2-md-datatable-row *ngFor="let transducer of device.transducers">
+        <td><p>{{ transducer.name }}</p></td>
+        <td><p>{{ transducer.unit ? transducer.unit : "-"}}</p></td>
+        <td><p>{{ transducer.is_actuable }}</p></td>
+        <td><p>{{ transducer.value ? transducer.value : "-" }}</p></td>
+        <td><p>{{ transducer.timestamp | date :"short"  }}</p></td>
+        <td>
+          <button md-icon-button color="warn" (click)="deleteTransducer(transducer._id, transducer.name)">
+            <md-icon >clear</md-icon>
+          </button>
+        </td>
+      </ng2-md-datatable-row>
+
+      <!-- New Transducer Row -->
+      <ng2-md-datatable-row>
+        <td>
+          <md-input-container>
+            <input mdInput placeholder="Name" [(ngModel)]="name">
+          </md-input-container>
+        </td>
+        <td>
+          <md-input-container>
+            <input mdInput placeholder="Unit" [(ngModel)]="unit">
+          </md-input-container>
+        </td>
+        <td>
+          <md-slide-toggle [(ngModel)]="actuable">{{ actuable }}</md-slide-toggle>
+        </td>
+        <td><p>-</p></td>
+        <td><p>-</p></td>
+        <td>
+          <button md-icon-button (click)="newTransducer()">
+            <md-icon>add</md-icon>
+          </button>
+        </td>
+      </ng2-md-datatable-row>
+    </tbody>
+  </ng2-md-datatable>
+
+</div>

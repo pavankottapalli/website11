@@ -1,0 +1,16 @@
+$black-text: #303132;
+
+.location {
+  h2 {
+    font-family: "Avenir-Heavy", sans-serif;
+    color: $black-text;
+  }
+  md-card {
+    box-shadow: none;
+    background-color: white;
+    .error {
+      color: #ff0000;
+      font-weight: bold;
+    }
+  }
+}

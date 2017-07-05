@@ -1,0 +1,461 @@
+<div class="splash-page">
+  <!-- Toolbar -->
+  <md-toolbar [ngClass]="{'pre-scroll': !isScrolled, 'post-scroll': isScrolled}">
+    <a routerLink="/">
+      <div class="logo-section">
+        <span class="logo-text">
+          <h3>{{title}}</h3>
+        </span>
+      </div>
+    </a>
+    <span class="spacer"></span>
+    <div class="title-buttons">
+      <a href="#about" md-button>About</a>
+      <a href="#howitworks" md-button>How It Works</a>
+      <a href="#technology" md-button>Technology</a>
+      <a href="#gallery" md-button>Gallery</a>
+      <a href="https://openchirp.github.io/api_doc" md-button>Docs</a>
+      <a md-raised-button class="login" [href]="login_url" routerLinkActive="active" *ngIf="!logged_in">Login</a>
+      <a md-raised-button class="login" routerLink="/home" routerLinkActive="active" *ngIf="logged_in">Home</a>
+    </div>
+    <div class="title-buttons-phone">
+      <a md-raised-button class="login" [href]="login_url" routerLinkActive="active" *ngIf="!logged_in">Login</a>
+      <a md-raised-button class="login" routerLink="/home" routerLinkActive="active" *ngIf="logged_in">Home</a>
+    </div>
+  </md-toolbar>
+  <!-- Page content -->
+  <div class="page-wrap">
+    <!-- Splash Page Section -->
+    <div class="picture-section">
+      <div class="picture-section-text">
+        <h3>Low-Power and Community-Driven <br> Wireless Connectivity for IoT</h3>
+      </div>
+    </div>
+    <!--About Section-->
+    <div id="about"></div>
+    <div class="about-section">
+      <div class="wrapper">
+        <div class="section-text-line-left">
+          <h4>About</h4>
+        </div>
+        <md-grid-list cols="1" rowHeight="8:1">
+          <md-grid-tile>
+            <h1>What is OpenChirp?</h1>
+          </md-grid-tile>
+          <md-grid-tile>
+            <div class="what-is-text">
+              <p>
+                OpenChirp is a management layer on top of LoRaWAN that provides <br>
+                data context, storage, visualization, and access control over the web. <br>
+                OpenChirp is currently powering a LoRaWAN Network at CMU that <br>
+                also spans most of the City of Pittsburgh. You can expand the OpenChirp <br>
+                network by using our software to connect your own LoRa base station.
+              </p>
+            </div>
+          </md-grid-tile>
+        </md-grid-list>
+        <!--<div class="what-is-text">-->
+        <!--<p align="center">-->
+        <!--Management layer on top of LoRaWAN that provides data <br>-->
+        <!--context, storage, visualization, and access control. <br>-->
+        <!--This is a web portal for registration, visualization, and sharing. <br>-->
+        <!--LoRaWAN Network at CMU spanning most of Pittsburgh.-->
+        <!--</p>-->
+        <!--</div>-->
+      </div>
+    </div>
+    <md-grid-list cols="3" rowHeight="4:3">
+      <md-grid-tile>
+        <div class="whatis-wrapper">
+          <!--<div class="iot-project" align="center"></div>-->
+          <!--<div class="wrapper">-->
+          <!--<div class="flex-container">-->
+          <!--<div class="whatis-col">-->
+          <div class="iot-project"></div>
+          <div class="whatis-text">
+            <p>
+              <strong>Your IoT Project</strong>
+            </p>
+            <p>
+              Contract-free, Secure, <br>
+              Battery Operated, Wireless <br>
+              Networking for your<br>
+              IoT project
+            </p>
+          </div>
+        </div>
+      </md-grid-tile>
+      <md-grid-tile>
+        <div class="whatis-wrapper">
+          <div class="community-driven"></div>
+          <div class="whatis-text">
+            <p>
+              <strong> Community-driven </strong>
+            </p>
+            <p>
+              Create an open <br>
+              community-driven <br>
+              Network
+            </p>
+          </div>
+        </div>
+      </md-grid-tile>
+      <md-grid-tile>
+        <div class="whatis-wrapper">
+          <div class="empowering"></div>
+          <div class="whatis-text">
+            <p><strong>Empowering All</strong></p>
+            <p>
+              Empower researchers, <br>
+              hobbyists, and citizen <br>
+              scientists
+            </p>
+          </div>
+        </div>
+      </md-grid-tile>
+    </md-grid-list>
+
+    <!--<div class="wrapper">-->
+    <!--<div class="flex-container">-->
+    <!--<div class="whatis-col">-->
+    <!--<div class="iot-project"></div>-->
+    <!--<div class="whatis-text">-->
+    <!--<p>-->
+    <!--<strong>Your IoT Project</strong>-->
+    <!--</p>-->
+    <!--<p>-->
+    <!--Contract-free, Secure, <br>-->
+    <!--Battery Operated, Wireless <br>-->
+    <!--Networking for your<br>-->
+    <!--IoT project-->
+    <!--</p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="whatis-col">-->
+    <!--<div class="community-driven"></div>-->
+    <!--<div class="whatis-text">-->
+    <!--<p>-->
+    <!--<strong> Community-driven </strong>-->
+    <!--</p>-->
+    <!--<p>-->
+    <!--Create an open <br>-->
+    <!--community-driven <br>-->
+    <!--Network-->
+    <!--</p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="whatis-col">-->
+    <!--<div class="empowering"></div>-->
+    <!--<div class="whatis-text">-->
+    <!--<p><strong>Empowering All</strong></p>-->
+    <!--<p>-->
+    <!--Empower researchers, <br>-->
+    <!--hobbyists, and citizen <br>-->
+    <!--scientists-->
+    <!--</p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--How it Works-->
+    <div id="howitworks"></div>
+    <div class="how-it-works">
+      <div class="section-text-line-right">
+        <h4>How it Works</h4>
+      </div>
+      <div class="how-it-works-pic" align="left">
+        <!--<md-grid-list cols="1" rowHeight="100px">-->
+          <!--<md-grid-tile>-->
+            <!--<div class="how-wrapper">-->
+              <!--<div class="step1"></div>-->
+            <!--</div>-->
+            <!--<div class="step-text">-->
+              <!--<p>-->
+                <!--Get a LoRaWAN compatible device-->
+              <!--</p>-->
+            <!--</div>-->
+          <!--</md-grid-tile>-->
+          <!--<md-grid-tile>-->
+            <!--<div class="how-wrapper">-->
+              <!--<div class="step2"></div>-->
+            <!--</div>-->
+            <!--<div class="step-text">-->
+              <!--<p>-->
+                <!--Log into OpenChirp with your Google account-->
+              <!--</p>-->
+            <!--</div>-->
+          <!--</md-grid-tile>-->
+          <!--<md-grid-tile>-->
+            <!--<div class="how-wrapper">-->
+              <!--<div class="step3"></div>-->
+            <!--</div>-->
+            <!--<div class="step-text">-->
+              <!--<p>-->
+                <!--Register your device-->
+              <!--</p>-->
+            <!--</div>-->
+          <!--</md-grid-tile>-->
+          <!--<md-grid-tile>-->
+            <!--<div class="how-wrapper">-->
+              <!--<div class="step4"></div>-->
+            <!--</div>-->
+            <!--<div class="step-text">-->
+              <!--<p>-->
+                <!--Start collecting data-->
+              <!--</p>-->
+            <!--</div>-->
+          <!--</md-grid-tile>-->
+        <!--</md-grid-list>-->
+
+        <div class="wrapper">
+          <div class="col-container">
+            <h1>How It Works</h1>
+            <div class="row-container">
+              <div class="step1"></div>
+              <div class="step-text">
+                <p>
+                  Get a LoRaWAN compatible device
+                </p>
+              </div>
+            </div>
+            <div class="row-container">
+              <div class="step2"></div>
+              <div class="step-text">
+                <p>
+                  Log into OpenChirp with your Google account
+                </p>
+              </div>
+            </div>
+            <div class="row-container">
+              <div class="step3"></div>
+              <div class="step-text">
+                <p>
+                  Register your device
+                </p>
+              </div>
+            </div>
+            <div class="row-container">
+              <div class="step4"></div>
+              <div class="step-text">
+                <p>
+                  Start collecting data
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--<div class="wrapper">-->
+        <!--<div class="col-container">-->
+        <!--<h1>5 Easy Steps</h1>-->
+        <!--<div class="row-container">-->
+        <!--<div class="step1"></div>-->
+        <!--<div class="step-text">-->
+        <!--<p>-->
+        <!--DEVICE<br>-->
+        <!--Get a LoRaWAN compatible device-->
+        <!--</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row-container">-->
+        <!--<div class="step2"></div>-->
+        <!--<div class="step-text">-->
+        <!--<p>-->
+        <!--REGISTER<br>-->
+        <!--Register it to OpenChirp's network-->
+        <!--</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row-container">-->
+        <!--<div class="step3"></div>-->
+        <!--<div class="step-text">-->
+        <!--<p>-->
+        <!--CHIRP<br>-->
+        <!--Start Chirping-->
+        <!--</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row-container">-->
+        <!--<div class="step4"></div>-->
+        <!--<div class="step-text">-->
+        <!--<p>-->
+        <!--BUILD<br>-->
+        <!--Build an app using our open API-->
+        <!--</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row-container">-->
+        <!--<div class="step5"></div>-->
+        <!--<div class="step-text">-->
+        <!--<p>-->
+        <!--REST<br>-->
+        <!--We take care of the REST-->
+        <!--</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--</div>-->
+      </div>
+    </div>
+
+    <!--Technology-->
+    <div id="technology"></div>
+    <div class="features">
+      <div class="wrapper">
+        <div class="section-text-line-left">
+          <h4>Technology</h4>
+        </div>
+        <h1 align="center">Features</h1>
+        <div class="feat-container">
+          <div class="protobuf-icon"></div>
+          <span class="feat-text">
+            <p>ProtoBuf serialization from <br>
+              end-device to cloud
+            </p>
+          </span>
+          <div class="cloud-icon"></div>
+          <div class="feat-text">
+            <p>MQTT for scalable real-time<br>
+              publish subscribe
+            </p>
+          </div>
+          <div class="open-icon"></div>
+          <div class="feat-text">
+            <p>Openly available gateway<br>
+              architecture
+            </p>
+          </div>
+          <div class="rest-icon"></div>
+          <span class="feat-text">
+            <p>REST interface for configuration<br>
+              and management
+            </p>
+          </span>
+          <div class="battery-icon"></div>
+          <div class="feat-text">
+            <p>10 Year Battery-Life</p>
+          </div>
+          <div class="intelligent-icon"></div>
+          <div class="feat-text">
+            <p>Intelligent network<br>
+              management
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Gallery-->
+    <div id="gallery"></div>
+    <div class="gallery-section">
+      <div class="section-text-line-right">
+        <h4>Gallery</h4>
+      </div>
+      <!--<div class="gallery-pic">-->
+      <md-grid-list cols="1" rowHeight="2:1">
+        <md-grid-tile>
+          <div class="gallery-wrapper">
+            <app-gallery></app-gallery>
+          </div>
+        </md-grid-tile>
+        <md-grid-tile>
+          <div class="gallery-text">
+            <h1>
+              Take a Look at Some <br>
+              Behind the Scenes
+            </h1>
+          </div>
+        </md-grid-tile>
+      </md-grid-list>
+
+
+      <!-- Carousel-->
+<div class="carousel-wrap"> 
+<carousel class='text-center'>
+  <slide>
+    <img class='img-main-carousel' src="assets/images/gallery/1.jpg" alt="First slide">
+    <div class="carousel-caption">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </slide>
+  <slide>
+    <img class='img-main-carousel' src="assets/images/gallery/3.jpg" alt="Second slide">
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </slide>
+  <slide>
+    <img class='img-main-carousel' src="assets/images/gallery/4.jpg" alt="Third slide">
+    <div class="carousel-caption">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </slide>
+  <slide>
+    <img class='img-main-carousel' src="assets/images/gallery/5.jpg" alt="Fourth slide">
+    <div class="carousel-caption">
+      <h3>Fourth slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </slide>
+  <slide>
+    <img class='img-main-carousel' src="assets/images/gallery/6.jpg" alt="Fifth slide">
+    <div class="carousel-caption">
+      <h3>Fifth slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </slide>
+  <slide>
+    <img class='img-main-carousel' src="assets/images/gallery/8.jpg" alt="Sixth slide">
+    <div class="carousel-caption">
+      <h3>Sixth slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </slide>
+  <slide>
+    <img class='img-main-carousel' src="assets/images/gallery/8.jpg" alt="Seventh slide">
+    <div class="carousel-caption">
+      <h3>Seventh slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </slide>
+</carousel>
+</div>
+
+      <!--<div class="gallery-wrapper">-->
+      <!--<app-gallery></app-gallery>-->
+      <!--</div>-->
+      <!--<span class="gallery-text">-->
+      <!--<h1>Take a Look at Some<br>-->
+      <!--Behind the Scenes-->
+      <!--</h1>-->
+      <!--</span>-->
+      <!--</div>-->
+    </div>
+    <!--Logos CMU/CyLab-->
+    <div class="cmu">
+      <!--<div class="cmu-pic"></div>-->
+      <br>
+      <md-grid-list cols="4" rowHeight="3:1">
+        <md-grid-tile></md-grid-tile>
+        <md-grid-tile>
+          <div class="ece-logo"></div>
+        </md-grid-tile>
+        <md-grid-tile>
+          <div class="cylab-logo"></div>
+        </md-grid-tile>
+        <md-grid-tile></md-grid-tile>
+      </md-grid-list>
+    </div>
+    <!--Footer-->
+    <div class="footer" id="splash-footer">
+      <div class="wrapper">
+        <p>OpenChirp &copy; Copyright 2017</p>
+      </div>
+    </div>
+  </div>
+</div>
