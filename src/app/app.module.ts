@@ -9,6 +9,9 @@ import { MdDataTableModule } from 'ng2-md-datatable';
 
 import 'hammerjs';
 
+// Bootstrap
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
 // Components
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -48,9 +51,8 @@ import { GroupComponent } from './components/groups/group.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { NewGroupComponent } from './components/groups/newgroup.component';
 import { GroupMembersComponent } from './components/groups/groupmembers.component';
-
-//BootStrap
-import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { UserGroupsComponent } from './components/groups/usergroups.component';
+import { UpdateConfigComponent } from './components/dialogs/update-config.component';
 
 // Services
 import { LocationService } from './services/location.service';
@@ -61,6 +63,7 @@ import { ErrorDialogService } from './services/error-dialog.service';
 import { InfraService } from './services/infraservice';
 import { GroupService } from './services/group.service';
 import { Configuration } from './config';
+import { GlobalDataService } from './services/global.data.service';
 
 @NgModule({
   declarations: [
@@ -101,11 +104,13 @@ import { Configuration } from './config';
     GroupComponent,
     AdminComponent,
     NewGroupComponent,
-    GroupMembersComponent
+    GroupMembersComponent,
+    UserGroupsComponent,
+    UpdateConfigComponent
   ],
   imports: [
     BrowserModule,
-    CarouselModule.forRoot(), //ngx-bootstrap
+    CarouselModule.forRoot(), //carousel bootstrap
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
@@ -125,7 +130,8 @@ import { Configuration } from './config';
     UserService,
     InfraService,
     GroupService,
-    Configuration
+    Configuration,
+    GlobalDataService
   ],
   entryComponents: [
     SuccessDialogComponent,
@@ -136,7 +142,8 @@ import { Configuration } from './config';
     PropertiesComponent,  
     ConfigRequiredComponent,
     InputConfigComponent,
-    NewGroupComponent
+    NewGroupComponent,
+    UpdateConfigComponent
   ],
   bootstrap: [AppComponent]
 })
